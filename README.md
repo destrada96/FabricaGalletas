@@ -1,4 +1,4 @@
-# Fabrica-Galletas Dev1
+# Fabrica-Galletas
 
 El objetivo principal de esta actividad es desarrollar una aplicación Web que permita simular una fábrica de galletas.
 
