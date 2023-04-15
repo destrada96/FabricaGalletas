@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu Agregar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Administración de galletas">
+<meta name="description" content="¡Ordene y gestione sus galletas aquí!">
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="nav">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./menu_agregar.html">Agregar</a></li>
+            <li><a href="./menu_eliminar.html">Eliminar</a></li>
+        </ul>
+    <img src="./assets/galletas-logo.png" alt="">
+</div>
+<div class="container">
+<form id="form2">
+    <div class="block">
+        <h1 class="title2">Agregar ingredientes</h1>
+            <div class="labels2">
+            <div class="left">
+                <label for="Formula"> Nombre del ingrediente</label>
+                <input type="text" id="data1">
+                <input class="buttonVerify" type="button" onclick="agregarIng()" value="Agregar" id="botonAgreIng">
+            </div>
+        </div>
+    </div>
+</form>
+<form id="form2">
+    <div class="block">
+        <h1 class="title2">Agregar formula de galletas</h1>
+            <div class="labels2">
+                <div class="left">
+                    <label for="Formula"> Nombre de la formula</label>
+                    <input type="text" id="data2">
+                    <label for="NomIng" id="nomIngrediente"> Nombre del ingrediente <input type="text" id="data2" ></label>
+                    <input class="buttonVerify" type="button" onclick="agregarIngFor()" value="Agregar Ingrediente" id="AgrIng">
+                    <input class="buttonVerify" type="button" onclick="agregarFor()" value="Agregar Formula" id="AgrFor">
+
+                </div>
+                <div class=rigth>
+                    <label for="Cantidad" id="Cantidad"> Cantidad <input type="text" id="data2" ></label>
+                    <input class="buttonVerify" type="button" onclick="actualizarFor()" value="Actualizar" id="ActFor">
+                </div>
+            </div>
+    </div>
+</form>
+<form id="form2">
+    <div class="block">
+        <h1 class="title2">Agregar unidades al almacen</h1>
+            <div class="labels2">
+                <div class="left">
+                    <label for="NombreIng"> Nombre del ingrediente</label>
+                    <input type="text" id="data3" required >
+                    <label for="Cantidad"> Cantidad </label>
+                    <input type="number" id="data3" required>
+                    <input class="buttonVerify" type="button" onclick="agregarIngAlm()" value="Agregar Ingrediente Almacen" id="botonAgreIngAlm">
+                </div>
+            </div>
+    </div>
+</form>
+</div>
+</body>
+<script src="index.js"></script>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrica Galletas</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./menu_agregar.html">Agregar</a></li>
+            <li><a href="./menu_eliminar.html">Eliminar</a></li>
+        </ul>
+        <img src="./assets/galletas-logo.png" alt="">
+    </div>
+    <div class="content">
+        <form id="form1">
+            <h1 class="title">Elaboración de galletas</h1>
+            <div class="labels">
+                <div class="left">
+                    <label for="Formula">Fórmula</label>
+                    <input id="data6" list="browsers" name="myBrowser">
+                    <datalist id="browsers">
+                    </datalist>
+                </div>
+                <div class="rigth">
+                    <label for="numero">Cantidad de Galletas</label>
+                    <input type="number" id="data6"  name="numero">
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" class="buttonVerify" onclick="verificarForIng()" value="Verificar Existencia" id="buttonVer">
+                <input type="button" onclick="startSim()"  value="Elaborar" id="simulador" class="locked buttonVerify">
+            </div>
+        </form>
+        <div class="card">
+            <h1>Progreso Actual</h1>
+            <div class="simulacion">
+                <h1 id="title-simulation"></h1>
+                <video id="video" src="" width="350px"></video>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<script>
+    // GET for DropDown
+    axios.get('http://127.0.0.1:3000/fabricaGalleta/getFormula')
+        .then(response => {
+        const formulas = response.data;
+        const dropdown = document.getElementById('browsers')
+        for (let i = 0; i < formulas.data.length; i++) {
+            const option = document.createElement('option')
+            option.value = formulas.data[i].NOMFormula
+            dropdown.appendChild(option)
+        }
+    })
+        .catch(error => {
+        console.error(error);
+    });
+</script>
+</html>

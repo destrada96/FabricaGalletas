@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Menu Eliminar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Administración de galletas">
+<meta name="description" content="¡Ordene y gestione sus galletas aquí!">
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="nav">
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./menu_agregar.html">Agregar</a></li>
+            <li><a href="./menu_eliminar.html">Eliminar</a></li>
+        </ul>
+    <img src="./assets/galletas-logo.png" alt="">
+</div>
+        <form>
+            <div class="labels">
+            <div class="left">
+            <h1 class="title">Formula a eliminar</h1>
+                <label for="Formula">Fórmula</label>
+                <input id="data4" list="browsers" name="myBrowser">
+                <datalist id="browsers">
+                </datalist>
+            <div class="button">
+                <input type="button" onclick="eliminarFor()" value="Eliminar" class="buttonVerify" id="btnEliminarFor">
+            </div>
+            </div>
+            </div>
+        </form>
+</body>
+<script src="index.js"></script>
+<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+<script>
+    // GET for DropDown
+    axios.get('http://127.0.0.1:3000/fabricaGalleta/getFormula')
+        .then(response => {
+        const formulas = response.data;
+        const dropdown = document.getElementById('browsers')
+        for (let i = 0; i < formulas.data.length; i++) {
+            const option = document.createElement('option')
+            option.value = formulas.data[i].NOMFormula
+            dropdown.appendChild(option)
+        }
+    })
+        .catch(error => {
+        console.error(error);
+    });
+</script>
+</html>

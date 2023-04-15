@@ -1,0 +1,271 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  width: 100vw;
+  height: 610px;
+  display: flex;
+}
+
+.nav {
+  font-family:Arial, 
+  sans-serif;color:#000000;
+  background-color:#ba611d; 
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav img{
+  width: 240px;
+  margin-right: 30px;
+}
+
+.nav ul{
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav ul li {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.nav ul li:hover{
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+#form1 {
+  margin-top: 20px;
+  background-color:#f7d7bc; 
+  width: 65%;
+  height: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#form2 {
+  margin-top: 20px;
+  background-color:#f7d7bc; 
+  width: 500px;
+  min-height: 620px;
+  height: 100vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form .title{
+  padding: 50px 100px;
+}
+
+form .labels{
+  display: flex;
+  gap: 0px;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  padding-top: 50px;
+}
+
+form .labels .rigth, form .labels .left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+form .labels .rigth{
+  width: 15%;
+}
+
+form .labels .left{
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  background-color:whitesmoke;
+  height: 30px;
+  border: none;
+}
+
+
+.button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.button input {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.buttonVerify:hover{
+  opacity: 0.5;
+}
+.buttonVerify:active{
+  opacity: 0.3;
+}
+
+.card{
+  width:35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.card h1{
+  margin-top: 40px;
+}
+
+.card .simulacion{
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .simulacion h1{
+  padding-bottom: 30px;
+}
+
+.card input {
+  margin-top: 60px;
+  font-size: 1.5rem;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 10px 10px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.card input:hover{
+  opacity: 0.5;
+}
+.card input:active{
+  opacity: 0.3;
+}
+/*# sourceMappingURL=style.css.map */
+.locked{
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+form .title2{
+  padding: 50px 10px;
+  width: 300%;
+}
+
+
+form .labels2{
+  display: flex;
+  gap: 3px;
+  width: 300%;
+  height: 100px;
+  align-items: center;
+  padding-top: 50px;
+}
+
+form .labels2 .rigth, form .labels .left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+form .labels2 .rigth{
+  width: 25%;
+  padding-top: 114px;
+  gap: 23px;
+}
+
+form .labels2 .rigth label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .labels2 .rigth #ActFor{
+  margin-top: 65px;
+}
+
+form .labels2 .left{
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+form .labels2 .left label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80%; /* adjust the width as needed */
+  margin: 0 auto; /* center the container horizontally */
+  gap: 60px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px; /* adjust the width as needed */
+  min-height: 500px; /* adjust the height as needed */
+  padding-left: 25px;
+}
+
+.boton-primario:hover{
+  opacity: 0.5;
+}
+
+.boton-primario:active{
+  opacity: 0.3;
+}
+
+.boton-locked:hover{
+  opacity: 1;
+}
+
+.boton-locked:active{
+  opacity: 1;
+}
